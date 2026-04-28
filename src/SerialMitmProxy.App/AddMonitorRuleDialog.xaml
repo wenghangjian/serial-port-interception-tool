@@ -1,0 +1,76 @@
+<Window x:Class="SerialMitmProxy.App.AddMonitorRuleDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Monitor Rule"
+        Width="560"
+        Height="400"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        FontFamily="Bahnschrift"
+        Background="#F2F6FA">
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="DescriptionTextBlock"
+                   Grid.Row="0"
+                   Margin="0,0,0,12"
+                   TextWrapping="Wrap"
+                   Foreground="#4D6275" />
+
+        <TextBlock x:Name="RuleNameLabel" Grid.Row="1" Margin="0,0,0,4" Foreground="#12324E" />
+        <TextBox x:Name="RuleNameTextBox" Grid.Row="2" Padding="8,6" Margin="0,0,0,12" />
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,12">
+            <TextBlock x:Name="DirectionLabel" Margin="0,0,0,4" Foreground="#12324E" />
+            <ComboBox x:Name="DirectionComboBox"
+                      Padding="4"
+                      Margin="0,0,0,10"
+                      DisplayMemberPath="Label"
+                      SelectedValuePath="Value" />
+
+            <TextBlock x:Name="PatternLabel" Margin="0,0,0,4" Foreground="#12324E" />
+            <TextBox x:Name="PatternTextBox" Padding="8,6" />
+        </StackPanel>
+
+        <Border Grid.Row="4"
+                Background="#EEF5FB"
+                BorderBrush="#D3DEE8"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="10">
+            <TextBox x:Name="HintTextBlock"
+                     IsReadOnly="True"
+                     BorderThickness="0"
+                     Background="Transparent"
+                     Foreground="#5B7185"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto"
+                     MinHeight="96" />
+        </Border>
+
+        <StackPanel Grid.Row="5"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,14,0,0">
+            <Button x:Name="CancelButton"
+                    Width="96"
+                    Margin="0,0,8,0"
+                    Padding="12,8"
+                    IsCancel="True"
+                    Click="CancelButton_Click" />
+            <Button x:Name="SaveButton"
+                    Width="112"
+                    Padding="12,8"
+                    IsDefault="True"
+                    Click="SaveButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

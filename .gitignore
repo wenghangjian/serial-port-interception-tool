@@ -1,0 +1,19 @@
+﻿# Build artifacts
+**/bin/
+**/obj/
+
+# User / IDE files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Runtime/local config
+config/serialmitmproxy.json
+
+# Codex local data
+.codex/
+# Runtime outputs inside release bundles
+**/captures/
+release/**/serialmitmproxy.json

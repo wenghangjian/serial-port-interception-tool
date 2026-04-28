@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SerialMitmProxy.Application\SerialMitmProxy.Application.csproj" />
+    <ProjectReference Include="..\SerialMitmProxy.Infrastructure\SerialMitmProxy.Infrastructure.csproj" />
+    <ProjectReference Include="..\SerialMitmProxy.Core\SerialMitmProxy.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\brand.png" />
+  </ItemGroup>
+
+</Project>

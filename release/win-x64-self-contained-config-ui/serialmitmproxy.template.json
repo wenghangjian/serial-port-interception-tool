@@ -1,0 +1,38 @@
+{
+  "session": {
+    "useInMemory": false,
+    "endpointA": {
+      "portName": "COM15",
+      "baudRate": 115200,
+      "dataBits": 8,
+      "parity": "None",
+      "stopBits": "One",
+      "handshake": "None"
+    },
+    "endpointB": {
+      "portName": "COM16",
+      "baudRate": 115200,
+      "dataBits": 8,
+      "parity": "None",
+      "stopBits": "One",
+      "handshake": "None"
+    },
+    "decoders": {
+      "mode": "TimeSlice",
+      "timeSliceMs": 40,
+      "delimiterHex": "0D 0A",
+      "fixedLength": 16
+    }
+  },
+  "capture": {
+    "enabled": true,
+    "folder": "captures"
+  },
+  "monitor": {
+    "maxFrames": 2000,
+    "uiThrottleMs": 50
+  },
+  "plugins": {
+    "folder": "plugins"
+  }
+}
