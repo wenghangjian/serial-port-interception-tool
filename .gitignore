@@ -1,19 +1,52 @@
 ﻿# Build artifacts
 **/bin/
 **/obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.dll
+*.exe
+*.pdb
+*.cache
 
 # User / IDE files
 .vs/
+.vscode/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.rsuser
 
 # Runtime/local config
 config/serialmitmproxy.json
+release/**/serialmitmproxy.json
+
+# Runtime outputs
+**/captures/
+**/logs/
+*.log
+*.pcap
+*.pcapng
 
 # Codex local data
 .codex/
-# Runtime outputs inside release bundles
-**/captures/
-release/**/serialmitmproxy.json
+
+# NuGet / .NET
+*.nupkg
+packages/
+.nuget/
+project.assets.json
+
+# Test results / coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
